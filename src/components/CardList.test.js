@@ -1,6 +1,6 @@
 import { shallow } from "enzyme";
 import React from "react";
-import Card from "./Card";
+import CardList from "./CardList";
 
 // Shallow rendering
 // Only testing this components **UNIT TESTING**
@@ -9,5 +9,13 @@ import Card from "./Card";
 // });
 
 it("expect to render Card component", () => {
-  expect(shallow(<Card />)).toMatchSnapshot();
+  const mockRobots = [
+    {
+      id: 1,
+      name: "Arya Stark",
+      username: "KillCersei",
+      email: "arya@gmail.com"
+    }
+  ];
+  expect(shallow(<CardList robots={mockRobots} />)).toMatchSnapshot();
 });
