@@ -38,6 +38,7 @@ class MainPage extends Component {
       return robot.name.toLowerCase().includes(searchField.toLowerCase());
     });
     if (isPending) {
+      console.log(isPending);
       return <h1 className="tc">Loading</h1>;
     } else {
       return (
